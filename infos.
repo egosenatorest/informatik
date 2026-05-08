@@ -1,0 +1,257 @@
+# 🤖 Adaptiver Roboterarm V2.0 – Komponentenliste
+
+## 📌 Projektbeschreibung
+
+Ein intelligenter Roboterarm auf Basis eines ESP32/Arduino-Systems, der:
+
+- Objekte mit einer Kamera erkennt
+- Ziele automatisch auswählt
+- Servomotoren weich und präzise steuert
+- einfache Gesten/Gebärden ausführt
+- optional über eine Website überwacht oder gesteuert werden kann
+
+---
+
+# 🧠 Kernsystem
+
+## Mikrocontroller
+
+### Empfehlung
+- ESP32 DevKit V1
+
+### Vorteile
+- mehr Leistung als Arduino Uno
+- WLAN + Bluetooth integriert
+- ideal für mehrere Servos
+- gut für Kommunikation mit Python/OpenCV
+
+---
+
+# 🦾 Roboterarm
+
+## Servomotoren
+
+### Hauptservos
+- 4x bis 5x MG996R High Torque Servos
+
+### Verwendung
+- Basisrotation
+- Hauptarm
+- Gelenke
+- Greifer
+
+### Wichtig
+SG90 Micro Servos reichen für tragende Teile meist nicht aus.
+
+---
+
+## Greifer
+
+### Möglichkeiten
+- fertiger Greifer
+- selbstgebaut aus:
+  - Holz
+  - Acryl
+  - 3D-Druck
+
+---
+
+# 👁️ Vision-System
+
+## Kamera
+
+### Empfohlen
+- USB-Webcam
+
+### Alternative
+- ESP32-CAM
+
+### Empfehlung
+USB-Webcam + Python/OpenCV ist deutlich leistungsfähiger.
+
+---
+
+# ⚡ Stromversorgung
+
+## Externes Netzteil
+
+### Pflicht
+- 5V 5A Netzteil
+
+### Wichtig
+Servos niemals direkt über USB betreiben.
+
+MG996R Servos benötigen relativ viel Strom.
+
+---
+
+# 🔌 Verkabelung
+
+## Benötigt
+- Breadboard
+- Jumper Wires
+- Dupont Kabel
+
+---
+
+# 🔧 Mechanik
+
+## Armstruktur
+
+### Möglichkeiten
+- Holz
+- Acryl
+- LEGO Technic
+- 3D-Druck
+
+### Empfehlung
+Holz + Schrauben = einfach und stabil.
+
+---
+
+## Befestigung
+
+### Benötigt
+- M3 Schrauben
+- Muttern
+- Abstandshalter
+
+---
+
+# 💻 Software
+
+## Python-System
+
+### Benötigt
+- Python
+- OpenCV
+
+### Aufgaben
+- Kameraauswertung
+- Objekttracking
+- Entscheidungslogik
+
+---
+
+# ✋ Gebärdensystem
+
+## Option A – Einfach
+
+Nur Armgesten:
+- STOPP
+- Winken
+- Zeigen
+
+### Vorteil
+Einfacher umzusetzen.
+
+---
+
+## Option B – Fortgeschritten
+
+Finger mit Servos bewegen.
+
+### Zusatzteile
+- 5x SG90 Micro Servos
+
+### Nachteil
+Deutlich komplexerer mechanischer Aufbau.
+
+---
+
+# 📡 Zusätzliche Sensoren
+
+## Ultraschallsensor
+
+### Modell
+- HC-SR04
+
+### Verwendung
+- Abstandsmessung
+- Kollisionsvermeidung
+
+---
+
+## IMU Sensor (optional)
+
+### Modell
+- MPU6050
+
+### Verwendung
+- Bewegungsanalyse
+- Stabilisierung
+
+---
+
+# 🌐 Optionales Webinterface
+
+## Technologien
+- HTML
+- CSS
+- JavaScript
+
+## Funktionen
+- Live-Steuerung
+- Statusanzeige
+- Kameraüberwachung
+
+---
+
+# 💰 Geschätzte Kosten
+
+| Komponente | Preis |
+|------------|--------|
+| ESP32 | 8–12€ |
+| MG996R Servos | 25–40€ |
+| Netzteil | 10€ |
+| Breadboard + Kabel | 10€ |
+| Webcam | vorhanden oder 10–20€ |
+| Mechanik | 10–30€ |
+
+## Gesamtkosten
+Ca. 60–100€
+
+---
+
+# ⚠️ Wichtige Hinweise
+
+## Fehler vermeiden
+
+### ❌ Servos direkt über USB betreiben
+→ zu wenig Strom
+
+### ❌ Zu schwache Servos kaufen
+→ Arm kann sich nicht bewegen
+
+### ❌ Alles gleichzeitig entwickeln
+→ erst einzelne Module testen
+
+---
+
+# 🚀 Empfohlene Entwicklungsreihenfolge
+
+1. Servo-Steuerung
+2. Armbewegungen
+3. Gesten
+4. Kamera-Tracking
+5. Entscheidungslogik
+6. Vollständige Integration
+
+---
+
+# ✅ Empfohlene Endkonfiguration
+
+## Elektronik
+- 1x ESP32 DevKit
+- 4x MG996R Servos
+- 1x Webcam
+- 1x 5V 5A Netzteil
+
+## Mechanik
+- Holz/Acryl Arm
+- Schrauben + Abstandshalter
+
+## Software
+- Arduino IDE oder PlatformIO
+- Python
+- OpenCV
